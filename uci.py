@@ -1,9 +1,5 @@
 from __future__ import print_function
 from __future__ import division
-import importlib
-import re
-import sys
-import time
 import logging
 import argparse
 import chess
@@ -77,7 +73,9 @@ def uci_loop(testing_cmds=None):
                 board.push_uci(move_uci)
 
         elif gui.startswith("go"):
-            # To calculate the score we can just substract Minimax valuation White - Minimax valuation black. If it's positive, white wins. If it's negative, black wins.
+            # To calculate the score we can just substract
+            # Minimax valuation White - Minimax valuation black.
+            # If it's positive, white wins. If it's negative, black wins.
             # e.g., info depth 3 score cp 34 time 55 nodes 7890 pv {}
             turn_color = not turn_color
 
@@ -107,11 +105,6 @@ def main():
         default="tunafish",
         nargs="?",
     )
-    args = parser.parse_args()
-
-    color = WHITE
-    our_time, opp_time = 1000, 1000  # time in centi-seconds
-    show_thinking = True
 
     uci_loop()
 
