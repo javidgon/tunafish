@@ -2,6 +2,8 @@
 
 Simple Chess Engine built in Python. Supports both Standalone and UCI-powered Chess GUIs modes.
 
+It uses the Minimax Algorithm (with depth 4) + Alpha-beta pruning to calculate moves.
+
 ## How to Play Standalone
 
 ```
