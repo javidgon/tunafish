@@ -1,2 +1,5 @@
 chess
 pytest
+flake8
+wheel
+black
